@@ -1,0 +1,383 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>I Am Consulting Quiz Test!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <h1>Quiz Test</h1>
+          </div>
+        </div>
+        <!-- No. 1 -->
+        <div class="row">
+          <div class="col-md-auto">
+            <h3>1. A palindrome is a word that reads the same backward or forward.
+              Write a function that checks if a given word is a palindrome. Character case
+              should be ignored.
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">JavaScript Code</label>
+            <textarea class="form-control code-format" id="jsCodeNo1" rows="10" readonly></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row align-items-end">
+          <div class="col-11">
+            <label for="label1 red">Example</label>
+            <input class="form-control" type="text" id="no1text" placeholder="Enter your text here!">
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-primary" id="no1submit">Confirm</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">Result</label>
+            <input class="form-control" type="text" id="result1" placeholder="" readonly>
+          </div>
+        </div>
+        <!-- End No. 1 -->
+        <br>
+        <!-- No. 2 -->
+        <div class="row">
+          <div class="col-md-auto">
+            <h3>2. Group words with same set of characters.
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">JavaScript Code</label>
+            <textarea class="form-control code-format" id="jsCodeNo2" rows="10" readonly></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row align-items-end">
+          <div class="col-11">
+            <label for="label1 red">Example</label>
+            <input class="form-control" type="text" id="no2text" placeholder="VMRCO, VORCM, MCRTOX, ZXTAC, XZATC, XMTCOR, OXVS, AZTXC, VXOS, RZAT, MRCOTX, SVXO, TRAZ, ZTAR, MVOCR,...">
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-primary" id="no2submit">Confirm</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">Result</label>
+            <textarea class="form-control" id="result2" rows="10" readonly></textarea>
+          </div>
+        </div>
+        <!-- End No. 2 -->
+        <br>
+        <!-- No. 3 -->
+        <div class="row">
+          <div class="col-md-auto">
+            <h3>3. Create function that generate possible strings of size N in set of N
+              characters.
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">JavaScript Code</label>
+            <textarea class="form-control code-format" id="jsCodeNo3" rows="10" readonly></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row align-items-end">
+          <div class="col-11">
+            <label for="label1 red">Example</label>
+            <input class="form-control" type="text" id="no3text" placeholder="Enter your text here!">
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-primary" id="no3submit">Confirm</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">Result</label>
+            <textarea class="form-control" id="result3" rows="10" readonly></textarea>
+          </div>
+        </div>
+        <!-- End No. 3 -->
+        <br>
+        <!-- No. 4 -->
+        <div class="row">
+          <div class="col-md-auto">
+            <h3>4. Given an integer n, Find the sum of 1<sup>1</sup> + 2<sup>2</sup> + 3<sup>3</sup> + ..... + n<sup>n</sup>
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">JavaScript Code</label>
+            <textarea class="form-control code-format" id="jsCodeNo4" rows="10" readonly></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row align-items-end">
+          <div class="col-11">
+            <label for="label1 red">Example</label>
+            <input class="form-control" type="text" id="no4text" placeholder="Enter you number here!">
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-primary" id="no4submit">Confirm</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="label1 red">Result</label>
+            <input class="form-control" type="text" id="result4" placeholder="" readonly>
+          </div>
+        </div>
+        <!-- End No. 4 -->
+      </div>
+
+      <script>
+        // Quiz number 1
+        const toLowerStr = (str) => str.toLowerCase().replace(/[\W_]/g,'')  // strip non-alphanumeric characters and convert to lower case
+        // main process
+        const quizNo1 = () => {
+          let result = document.getElementById("result1")
+          let str = document.getElementById("no1text").value
+          const convertStr = toLowerStr(str)
+          for(let i = 0; i < convertStr.length / 2 ; i++){
+            console.log(i+" "+convertStr[i]+"----"+convertStr[convertStr.length - 1 - i])
+
+            if(convertStr[i] !== convertStr[convertStr.length - 1 - i]) {
+              result.value = "false"
+
+              return false
+            }
+          }
+          result.value = "true"
+          return true
+        }
+        
+        document.getElementById("no1submit").addEventListener("click", quizNo1)
+        document.getElementById("jsCodeNo1").value = "// strip non-alphanumeric characters and convert to lower case\n"+
+        "const toLowerStr = (str) => str.toLowerCase().replace(/[\W_]/g,'')\n"+
+        "// main process\n"+
+        "const quizNo1 = () => {\n"+
+        " let result = document.getElementById(\"result1\")\n"+
+        " let str = document.getElementById(\"no1text\").value\n"+
+        " const convertStr = toLowerStr(str)\n"+
+        " for(let i = 0; i < convertStr.length / 2 ; i++){\n"+
+        "   if(convertStr[i] !== convertStr[convertStr.length - 1 - i]) {\n"+
+        "     result.value = \"false\"\n"+
+        "     return false\n"+
+        "   }\n"+
+        " }\n"+
+        " result.value = \"true\"\n"+
+        " return true\n"+
+        "}"
+
+
+        // Quiz number 2
+        // sort alphabets
+        const sortAlphabets = (text) => {
+            return text.split('').sort().join('')
+        }
+        // main process
+        const quizNo2 = () => {
+          document.getElementById("result2").value = ""
+          var words = document.getElementById("no2text").value
+          words = words.split(',')
+          // The output object
+          var anagrams = {}
+
+          for (var i in words) {
+              var word = words[i]
+              // sort the word
+              var sorted = sortAlphabets(word)
+              // if key already exist, push word
+              if (anagrams[sorted] != null) {
+                anagrams[sorted].push(word)
+              }else{
+                // create new key and push new word
+                anagrams[sorted] = [word]
+              }
+          }
+          var countNo2 = 1
+          // Output result
+          for (var word in anagrams) {
+              let words = anagrams[word]
+              let seperate = " - "
+              let result = ""
+              for (let n in words) {
+                  result += words[n] + seperate
+              }
+              document.getElementById("result2").value +=  countNo2+". " + result.slice(0, -3) + "\n"
+              countNo2++
+          }
+        }
+        document.getElementById("no2submit").addEventListener("click", quizNo2)
+        document.getElementById("jsCodeNo2").value = "// sort alphabets\n"+
+        "const sortAlphabets = (text) => {\n"+
+        "    return text.split('').sort().join('')\n"+
+        "}\n"+
+        "// main process\n"+
+        "const quizNo2 = () => {\n"+
+        "   document.getElementById(\"result2\").value = \"\"\n"+
+        "   var words = document.getElementById(\"no2text\").value\n"+
+        "   words = words.split(',')\n"+
+        "   // The output object\n"+
+        "   var anagrams = {};\n\n"+
+        "   for (var i in words) {\n"+
+        "     var word = words[i]\n"+
+        "     // sort the word\n"+
+        "     var sorted = sortAlphabets(word)\n"+
+        "     // if key already exist, push word\n"+
+        "     if (anagrams[sorted] != null) {\n"+
+        "       anagrams[sorted].push(word)\n"+
+        "     }else{\n"+
+        "       // create new key and push new word\n"+
+        "       anagrams[sorted] = [word]\n"+
+        "     }\n"+
+        "   }\n"+
+        "   var countNo2 = 1\n"+
+        "   // Output result\n"+
+        "   for (var word in anagrams) {\n"+
+        "     let words = anagrams[word]\n"+
+        "     let seperate = \" - \"\n"+
+        "     let result = \"\"\n"+
+        "       for (let n in words) {\n"+
+        "         result += words[n] + seperate\n"+
+        "       }\n"+
+        "     document.getElementById(\"result2\").value +=  countNo2+\". \" + result.slice(0, -1) + \"\\n\"\n"+
+        "     countNo2++"+
+        "   }\n"+
+        "}"
+
+
+        // Quiz number 3
+        const quizNo3 = () => {
+          let str = document.getElementById("no3text").value
+          let result = permutations(str)
+          console.log(result)
+          document.getElementById("result3").value = result
+        }
+
+        const permutations = (string) => {
+          if (string.length < 2) return string // if string length remains only 1 mean we finish.
+
+          var result = []
+          for (var i = 0; i < string.length; i++) {
+            var char = string[i]
+
+            if (string.indexOf(char) != i){ // if char was used already
+              continue; // skip it this time
+            }
+
+            var remainingString = string.slice(0, i) + string.slice(i + 1, string.length)
+            for (var subPermutation of permutations(remainingString)) {
+              result.push(char + subPermutation)
+            }
+          }
+          return result
+        }
+
+        document.getElementById("no3submit").addEventListener("click", quizNo3)
+        document.getElementById("jsCodeNo3").value = "// Quiz number 3\n"+
+        "const quizNo3 = () => {\n"+
+        "  let str = document.getElementById(\"no3text\").value\n"+
+        "  let result = permutations(str)\n"+
+        "  console.log(result)\n"+
+        "  document.getElementById(\"result3\").value = result\n"+
+        "}\n"+
+        "\n"+
+        "const permutations = (string) => {\n"+
+        "  if (string.length < 2) return string // if string length remains only 1 mean we finish.\n"+
+        "\n"+
+        "  var result = []\n"+
+        "  for (var i = 0; i < string.length; i++) {\n"+
+        "    var char = string[i]\n"+
+        "\n"+
+        "    if (string.indexOf(char) != i){ // if char was used already\n"+
+        "      continue; // skip it this time\n"+
+        "    }\n"+
+        "\n"+
+        "    var remainingString = string.slice(0, i) + string.slice(i + 1, string.length)\n"+
+        "    for (var subPermutation of permutations(remainingString)) {\n"+
+        "      result.push(char + subPermutation)\n"+
+        "   }\n"+
+        "  }\n"+
+        "  return result\n"+
+        "}\n"
+
+
+        // Quiz number 4
+        const quizNo4 = () => {
+          let number = document.getElementById("no4text").value
+          let result = sumPower(number)
+          document.getElementById("result4").value = result
+        }
+
+        // main process
+        const sumPower = (number) => {
+          let total = 0
+          for(let i = 1; i <= number; i++) {
+            total += power(i)
+          }
+          return total
+        }
+        // do power input number
+        const power = (number) => {
+          let result = Math.pow(number,number)
+          return parseInt(result)
+        }
+
+        document.getElementById("no4submit").addEventListener("click", quizNo4)
+        document.getElementById("jsCodeNo4").value = "// Quiz number 4\n"+
+        "const quizNo4 = () => {\n"+
+        "  let number = document.getElementById(\"no4text\").value\n"+
+        "  let result = sumPower(number)\n"+
+        "  document.getElementById(\"result4\").value = result\n"+
+        "}\n"+
+
+        "// main process\n"+
+        "const sumPower = (number) => {\n"+
+        " let total = 0\n"+
+        "  for(let i = 1; i <= number; i++) {\n"+
+        "    total += power(i)\n"+
+        "  }\n"+
+        "  return total\n"+
+        "}\n"+
+        "// power input number\n"+
+        "const power = (number) => {\n"+
+        " let result = Math.pow(number,number)\n"+
+        "  return parseInt(result)\n"+
+        "}"
+
+      </script>
+
+
+      <!-- Script -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+
+  <style>
+    textarea {
+      resize: none;
+    }
+    .code-format {
+      background-color: white!important;
+      font-family: monospace;
+    }
+    .container {
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+  </style>
+</html>
