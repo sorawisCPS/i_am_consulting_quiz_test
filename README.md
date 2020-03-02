@@ -3,13 +3,13 @@
 ## JavaScript Code Files
 ```
 Quiz Number 1
-    - [quiz-no-1.js] (https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-1.js)
+    - [quiz-no-1.js](https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-1.js)
 Quiz Number 2
-    - [quiz-no-1.js] (https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-2.js)
+    - [quiz-no-1.js](https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-2.js)
 Quiz Number 3
-    - [quiz-no-1.js] (https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-3.js)
+    - [quiz-no-1.js](https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-3.js)
 Quiz Number 4
-    - [quiz-no-1.js] (https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-4.js)
+    - [quiz-no-1.js](https://github.com/sorawisCPS/i_am_consulting_quiz_test/blob/master/quiz-no-4.js)
 
 ```
 
